@@ -1,0 +1,320 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC313380-A8F8-49F7-B5D7-1A1F9873AD40}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>NetFocus.UtilityTool.CodeGenerator</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NetFocus.UtilityTool.CodeGenerator</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>NetFocus.UtilityTool.CodeGenerator.MainClass</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NetFocus.Components.AddIns, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\NetFocus.Components.AddIns.dll</HintPath>
+    </Reference>
+    <Reference Include="NetFocus.Components.GuiInterface, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\NetFocus.Components.GuiInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="NetFocus.Components.TextEditor, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\NetFocus.Components.TextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="NetFocus.Components.UtilityLibrary, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\NetFocus.Components.UtilityLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="NetFocus.Web.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\NetFocus.Web.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddInSettingsHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\AbstractMenuCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\AutostartCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\GenerateCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\EntityTargetInfo.cs" />
+    <Compile Include="Components\DefaultTargetInfo.cs" />
+    <Compile Include="Components\EntityInputControlType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\MatchKey.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\Replacer.cs" />
+    <Compile Include="Commands\EditCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\FileCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\HelpCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\IMenuCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\OptionCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\WindowStateCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\Entity.cs" />
+    <Compile Include="Components\EntityField.cs" />
+    <Compile Include="Gui\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Components\IStatusUpdate.cs" />
+    <Compile Include="Gui\Components\SdMenuCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\GetEntityInfoControl.Designer.cs">
+      <DependentUpon>GetEntityInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\GetEntityListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\DefaultWorkbench.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\DeleteFileOrFolderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\DeleteFileOrFolderForm.Designer.cs">
+      <DependentUpon>DeleteFileOrFolderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\GetCloseFileExtensionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\GetCloseFileExtensionForm.Designer.cs">
+      <DependentUpon>GetCloseFileExtensionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\GetDeleteFileExtensionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\GetDeleteFileExtensionForm.Designer.cs">
+      <DependentUpon>GetDeleteFileExtensionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\GetEntityListTargetInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\GetEntityListTargetInfoForm.Designer.cs">
+      <DependentUpon>GetEntityListTargetInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\GetEntityInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\InputBusinessNameSpaceInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\InputContainerMappingIdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\InputDataNameSpaceInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\NewFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\ProcedureSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\SqlConnectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\WorkbenchSingleton.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Codons\AutoStartCodon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Codons\MenuItemCodon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Codons\ServiceCodon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Codons\ToolBarCodon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Codons\ToolBarItemCodon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Conditions\WindowStateCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\GetEntityFormToolBarService.cs" />
+    <Compile Include="Services\ServiceManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Services\ToolBarService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="App.config" />
+    <Content Include="App.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gui\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GetEntityListForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GetEntityListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\DefaultWorkbench.resx">
+      <DependentUpon>DefaultWorkbench.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\DeleteFileOrFolderForm.resx">
+      <DependentUpon>DeleteFileOrFolderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GetCloseFileExtensionForm.resx">
+      <DependentUpon>GetCloseFileExtensionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GetDeleteFileExtensionForm.resx">
+      <DependentUpon>GetDeleteFileExtensionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GetEntityListTargetInfoForm.resx">
+      <DependentUpon>GetEntityListTargetInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GetEntityInfoControl.resx">
+      <DependentUpon>GetEntityInfoControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\InputBusinessNameSpaceInfoForm.resx">
+      <DependentUpon>InputBusinessNameSpaceInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\InputContainerMappingIdForm.resx">
+      <DependentUpon>InputContainerMappingIdForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\InputDataNameSpaceInfoForm.resx">
+      <DependentUpon>InputDataNameSpaceInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\NewFileDialog.resx">
+      <DependentUpon>NewFileDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ProcedureSettingForm.resx">
+      <DependentUpon>ProcedureSettingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\SqlConnectionForm.resx">
+      <DependentUpon>SqlConnectionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\WorkbenchSingleton.resx">
+      <DependentUpon>WorkbenchSingleton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
